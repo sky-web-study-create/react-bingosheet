@@ -50,7 +50,6 @@ export const App = () => {
   ));
 
   return (
-    <>
       <table>
         <thead>
           <tr>{headsName}</tr>
@@ -59,6 +58,5 @@ export const App = () => {
           {bodyData}
         </tbody>
       </table>
-    </>
   );
 };
