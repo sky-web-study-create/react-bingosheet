@@ -4,7 +4,7 @@ import lodash from "lodash";
 
 export const App = () => {
   //BINGOのタイトル表示
-  const heads = ["B", "I", "N", "G", "O"];
+  const heads = [...'BINGO'];
   const headsName = heads.map((head) => <th key={head}>{head}</th>);
 
   const createColumn = (col) => {
