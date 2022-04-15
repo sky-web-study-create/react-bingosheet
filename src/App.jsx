@@ -5,7 +5,7 @@ import lodash from "lodash";
 export const App = () => {
   //BINGOのタイトル表示
   const heads = ["B", "I", "N", "G", "O"];
-  const headsName = heads.map((head) => <th>{head}</th>);
+  const headsName = heads.map((head) => <th key={head}>{head}</th>);
 
   const createColumn = (col) => {
     const source = [];
@@ -41,10 +41,10 @@ export const App = () => {
   const bingoColumns = bingoDataCreate();
   //配列の縦横を入替
   const bingoData = lodash.unzip(bingoColumns);
-  const bodyData = bingoData.map((row1, index) => (
-    <tr key={index}>
-      {row1.map((row2, index) => (
-        <td key={index}>{row2}</td>
+  const bodyData = bingoData.map((row1) => (
+    <tr key={row1}>
+      {row1.map((row2) => (
+        <td key={row2}>{row2}</td>
       ))}
     </tr>
   ));
